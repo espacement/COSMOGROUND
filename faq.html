@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href ="assets/favicon.png" rel = "shortcut icon" type = "image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+    <title>FAQ</title>
+</head>
+<body>
+    <!-- upper -->
+    <header>
+        <div class="upper_container ">
+            <div class="upper__content">
+                <a class="infohead" href="faq.html">FAQ</a>
+                <a class="infohead" href=" mailto:CosmoGround@gmail.com">CosmoGround@gmail.com</a>
+            </div>
+        </div>
+        <!-- header -->
+        <div class="header__content">
+            <div class="header__container">
+                <a href="index.html"><img class="nav" src="assets/logo.svg" alt="loAgo"></a>
+                <a class="nav" href="public.html">ИНТЕРЕСНОЕ</a>
+                <a class="nav" href="photos.html">ГАЛЕРЕЯ</a>
+                <a class="nav" href="log.html">ВОЙТИ</a>
+                <a class="nav" id="open-cart" href="#">КОРЗИНА <span id="cart-count" class="cart-count">0</span></a>
+                
+            </div> 
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <div class="faq-container">
+            <h1>Часто задаваемые вопросы</h1>
+            <div class="faq">
+                <div class="faq-item">
+                    <button class="faq-question">Что такое CosmoGround?</button>
+                    <div class="faq-answer">
+                        <p>CosmoGround предлагает земельные участки на Марсе по доступным ценам. Покупка включает электронный сертификат.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Как я могу купить участок?</button>
+                    <div class="faq-answer">
+                        <p>Вы можете выбрать участок на нашем сайте и добавить его в корзину, затем оформить заказ, указав ваши контактные данные.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Что входит в покупку участка?</button>
+                    <div class="faq-answer">
+                        <p>Каждая покупка включает электронный сертификат, который будет отправлен на указанный вами электронный адрес.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Как долго идет обработка заказа?</button>
+                    <div class="faq-answer">
+                        <p>Заказы обрабатываются в течение 24 часов после получения оплаты. Сертификат будет отправлен на ваш электронный адрес.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Свяжитесь с нами</p>
+        <div class="social-icons">
+            <a href="https://t.me/yourlink" target="_blank"><i class="fa fa-telegram tg-ico" style="font-size: 1.6rem;"></i></a>
+            <a href="https://vk.com/yourlink" target="_blank"><i class="fa fa-vk vk-ico" style="font-size: 1.6rem;"></i></a>
+        </div>
+        <a href="tel:88005553535" class="infohead">88005553535</a>
+        <p>©CosmoGround 2024</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2>Корзина</h2>
+            <div class="cart-details">
+                <div class="cart-items-container">
+                    <ul id="cart-items" class="cart-items"></ul>
+                </div>
+                <div class="order-form-container">
+                    <form id="order-form">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <label for="lastname">Фамилия:</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                        <label for="firstname">Имя:</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                        <label for="middlename">Отчество:</label>
+                        <input type="text" id="middlename" name="middlename" required>
+                        <button type="submit">Оформить заказ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

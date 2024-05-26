@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+    <title>CosmoGround</title>
+</head>
+<body>
+    <!-- Аппер -->
+    <header>
+        <div class="upper_container">
+            <div class="upper__content">
+                <a class="infohead" href="faq.html">FAQ</a>
+                <a class="infohead" href="mailto:CosmoGround@gmail.com">CosmoGround@gmail.com</a>
+            </div>
+        </div>
+        <!-- Хеадер -->
+        <div class="header__content">
+            <div class="header__container">
+                <a href="index.html"><img class="nav" src="assets/logo.svg" alt="logo"></a>
+                <a class="nav" href="public.html">ИНТЕРЕСНОЕ</a>
+                <a class="nav" href="photos.html">ГАЛЕРЕЯ</a>
+                <a class="nav" href="log.html">ВОЙТИ</a>
+                <a class="nav" id="open-cart" href="#">КОРЗИНА <span id="cart-count" class="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+    <!-- Мейн -->
+    <main>
+        <div class="content">
+            <div class="banner">
+                <p class="banner-title">COSMO GROUND</p>
+                <p class="banner-text">САМЫЕ НИЗКИЕ ЦЕНЫ НА ЗЕМЕЛЬНЫЕ УЧАСТКИ НА МАРСЕ</p>
+            </div>
+            <div class="item">
+                <img class="item-img" src="assets/object1.svg" alt="object">
+                <div class="item-details">
+                    <div class="item-name">Стандартный участок в 1 акр</div>
+                    <div class="item-price">₽6000</div>                    <div class="item-desc">При покупке на указанную почту придет электронный сертификат</div>
+                    <button class="item-button" onclick="addToCart('Стандартный участок в 1 акр', 6000)">В КОРЗИНУ</button>
+                </div>
+            </div>
+            <div class="strip"></div>
+            <div class="item">
+                <img class="item-img" src="assets/object1.svg" alt="object">
+                <div class="item-details">
+                    <div class="item-name">Стандартный участок в 10 акров</div>
+                    <div class="item-price">₽60000</div>
+                    <div class="item-desc">При покупке на указанную почту придет электронный сертификат</div>
+                    <button class="item-button" onclick="addToCart('Стандартный участок в 10 акров', 60000)">В КОРЗИНУ</button>
+                </div>
+            </div>
+            <div class="owners-section">
+                <h2 class="owners-title">У кого уже есть участки на Марсе</h2>
+                <div class="owners-gallery">
+                    <div class="owner-item">
+                        <img src="assets/karaganda.jpg" alt="Owner 1" class="owner-img">
+                    </div>
+                    <div class="owner-item">
+                        <img src="assets/photo1.jpg" alt="Owner 2" class="owner-img">
+                    </div>
+                    <div class="owner-item">
+                        <img src="assets/photo2.jpg" alt="Owner 3" class="owner-img">
+                    </div>
+                    <div class="owner-item">
+                        <img src="assets/photo3.jpg" alt="Owner 4" class="owner-img">
+                    </div>
+                </div>
+            </div>
+            <h2 class="owners-title">Интересное</h2>
+            <div class="news-slider-container">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <div class="news-slider">
+                    <div class="slide" onclick="location.href='public.html';">
+                        <img src="assets/1pub.webp" alt="News 1" class="news-image">
+                        <div class="slide-content">
+                            <h3>Эксперт космической отрасли: совершенно нормально уже говорить о Марсе</h3>
+                            <p>Российские и китайские ученые обсуждают возможность совместного изучения Марса, заявил научный руководитель Института космических исследований РАН Лев Зеленый</p>
+                        </div>
+                    </div>
+                    <div class="slide" onclick="location.href='public.html';">
+                        <img src="assets/photo2.jpg" alt="News 2" class="news-image">
+                        <div class="slide-content">
+                            <h3>Новость 2: Успешный запуск нового проекта</h3>
+                            <p>Описание новости 2. Мы рады объявить об успешном запуске нашего нового проекта.</p>
+                        </div>
+                    </div>
+                    <div class="slide" onclick="location.href='public.html';">
+                        <img src="assets/photo3.jpg" alt="News 3" class="news-image">
+                        <div class="slide-content">
+                            <h3>Новость 3: Новые скидки на земельные участки</h3>
+                            <p>Описание новости 3. Не упустите шанс приобрести участок со скидкой!</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+            
+        </div>
+    </main>
+    <!-- ФУТЕР -->
+    <footer>
+        <p>Свяжитесь с нами</p>
+        <div class="social-icons">
+            <a href="https://t.me/yourlink" target="_blank"><i class="fa fa-telegram tg-ico" style="font-size: 1.6rem;"></i></a>
+            <a href="https://vk.com/yourlink" target="_blank"><i class="fa fa-vk vk-ico" style="font-size: 1.6rem;"></i></a>
+        </div>
+        <a href="tel:880055с53535" class="infohead">88005553535</a>
+        <p>©CosmoGround 2024</p>
+    </footer>
+
+    <!-- Корзина -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2>Корзина</h2>
+            <div class="cart-details">
+                <div class="cart-items-container">
+                    <ul id="cart-items" class="cart-items"></ul>
+                    <div class="total-amount">
+                        <h3>Общая сумма: <span id="total-amount">₽0</span></h3>
+                    </div>
+                </div>
+                
+                <div class="order-form-container">
+                    <form id="order-form">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <label for="lastname">Фамилия:</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                        <label for="firstname">Имя:</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                        <label for="middlename">Отчество:</label>
+                        <input type="text" id="middlename" name="middlename" required>
+                        <button type="submit">Оформить заказ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
